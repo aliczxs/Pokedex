@@ -1,14 +1,11 @@
-
-<img src="https://sg.portal-pokemon.com/img/common/logo.png" width="120" style="margin-left:50%;">
-<div class="pokemon-list">
-
-<app-pokemon-card *ngFor="let pokemon of pokemons; index as i" 
-[pokemon]="pokemon"
-[numero] = "i + 1"
-></app-pokemon-card>
-
+<div>
+  <img src="https://sg.portal-pokemon.com/img/common/logo.png" width="130" style="margin-left:49%">
 </div>
-<!--
-<div *ngFor="let pokemon of pokemons">
-    Pokemon: {{ pokemon }} </div>
--->
+<div style="background-color:#fffffe">
+<div class="pokemon-list">
+  <app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons; let i = index"
+                   [pokemon]="pokemon.name"
+                   [numero]="i + 1"
+  ></app-pokemon-card>
+</div>
+</div>
